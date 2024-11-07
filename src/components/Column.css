@@ -1,0 +1,21 @@
+.column {
+  flex: 0 0 300px; /* Fixed width for each column */
+  margin-right: 15px; /* Spacing between columns */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container {
+  overflow-y: auto; /* Enables vertical scrolling */
+  height: calc(
+    100vh - 50px
+  ); /* Adjust height to make cards scrollable within each column */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+h2 {
+  margin: 0 0 10px 0;
+  text-align: center;
+}

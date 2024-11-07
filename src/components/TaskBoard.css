@@ -1,0 +1,6 @@
+.task-board {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  height: 100vh; /* Full viewport height */
+  padding: 10px;
+}
