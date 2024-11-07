@@ -25,3 +25,8 @@
   align-items: center;
   gap: 5px;
 }
+.user-icon {
+  display: flex;
+  justify-content: space-between; /* Align items to opposite sides */
+  align-items: center; /* Center align items vertically */
+}

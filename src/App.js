@@ -21,20 +21,8 @@ function App() {
 
   return (
     <div className="App" style={{ padding: "20px" }}>
-      <h1>Task Management & Attachment Manager</h1>
-
       {/* Taskboard Component */}
       <TaskBoard />
-
-      {/* Attachment Section */}
-      <div style={{ marginTop: "20px" }}>
-        <span
-          onClick={handleAttachmentClick}
-          style={{ cursor: "pointer", fontSize: "18px" }}
-        >
-          <FontAwesomeIcon icon={faPaperclip} /> {attachments.length}
-        </span>
-      </div>
 
       {/* Modal for Attachment Upload */}
       {showModal && (

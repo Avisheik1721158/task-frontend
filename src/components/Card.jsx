@@ -4,9 +4,18 @@ import {
   faPaperclip,
   faCommentDots,
   faCalendarAlt,
+  faLayerGroup,
+  faTabletScreenButton,
+  faTable,
+  faUser,
+  faUserAlt,
+  faUserAltSlash,
+  faUserAstronaut,
+  faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import "../components/Card.css";
 import AttachmentModal from "./AttachmentModal";
+import { faUserCheck } from "@fortawesome/free-solid-svg-icons/faUserCheck";
 
 const Card = () => {
   const [showModal, setShowModal] = useState(false);
@@ -22,10 +31,38 @@ const Card = () => {
 
   return (
     <div className="card">
-      <h3>Client Name</h3>
-      <p>Lorem ipsum dolor sit amet...</p>
+      <div className="user-icon">
+        <span>
+          {" "}
+          <FontAwesomeIcon icon={faUser}></FontAwesomeIcon> Client name
+        </span>
+        <span>
+          {" "}
+          <FontAwesomeIcon icon={faUser}></FontAwesomeIcon> Sadik Istiak
+        </span>
+      </div>
+
+      <p className="user-icon">
+        {" "}
+        <span>
+          <FontAwesomeIcon icon={faLayerGroup}></FontAwesomeIcon>{" "}
+          <small>Lorem ipsum dolor sit.. </small>
+        </span>{" "}
+        <span>
+          <FontAwesomeIcon icon={faTable}></FontAwesomeIcon> 1/2
+        </span>
+      </p>
+
       <div className="card-footer">
         <div className="card-icons">
+          <span>
+            {" "}
+            <FontAwesomeIcon icon={faUserAlt}></FontAwesomeIcon>
+          </span>
+          <span>
+            {" "}
+            <FontAwesomeIcon icon={faUserCheck}></FontAwesomeIcon>
+          </span>
           <span>
             <FontAwesomeIcon /> 12+
           </span>
@@ -46,13 +83,6 @@ const Card = () => {
           onUpload={handleUpload}
         />
       )}
-      {/* <div className="attachment-list">
-        {attachments.map((file, index) => (
-          <div key={index} className="attachment-item">
-            {file.name} ({file.type.split("/").pop()})
-          </div>
-        ))}
-      </div> */}
     </div>
   );
 };
